@@ -26,12 +26,14 @@ app.get('/', (req, res) => {
     res.render("index")
 })
 
-app.get('/', (req, res) => {
-     res.render("hello world")
-})
-   
-const PORT = process.env.PoRT || 5000;
+app.get('/home', (req, res) => {
+    res.send("this is for only testing all the server details if all of them are working fully")
+}) 
+
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () =>{
-    console.log(`Server is Running on port...: ${PORT}`) 
-}) 
+    console.log(`Server is Running on port: ${PORT}`)  
+    
+    
+})              
